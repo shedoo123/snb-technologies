@@ -1,0 +1,613 @@
+
+/* =========================================
+   SNB TECHNOLOGIES
+   ABOUT PAGE — SPRINT 3.4
+   ========================================= */
+
+/* 1. DESIGN SYSTEM */
+
+:root {
+    --about-bg: #080D16;
+    --about-surface: #101B2B;
+    --about-surface-2: #142238;
+
+    --about-blue: #087BFF;
+    --about-cyan: #19D9F2;
+
+    --about-white: #F5F8FC;
+    --about-text: #C5D0DE;
+    --about-muted: #8C9AAF;
+
+    --about-border: rgba(255,255,255,0.09);
+
+    --about-gradient:
+        linear-gradient(120deg, #087BFF, #19D9F2);
+}
+
+/* 2. GLOBAL RESET */
+
+.about-header,
+.about-header *,
+main,
+main * {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: var(--about-bg);
+    color: var(--about-text);
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 3. HEADER */
+
+.about-header {
+    min-height: 78px;
+    padding: 14px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: rgba(8,13,22,0.95);
+    border-bottom: 1px solid var(--about-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+}
+
+.about-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--about-white);
+}
+
+.about-brand img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.about-brand span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.about-brand strong {
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.about-brand small {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--about-cyan);
+}
+
+.about-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.about-nav a {
+    color: var(--about-muted);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.about-nav a:hover,
+.about-nav a.active {
+    color: var(--about-cyan);
+}
+
+/* 4. HERO SECTION */
+
+.about-hero {
+    min-height: 580px;
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(8,123,255,0.16),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #080D16,
+            #101C30
+        );
+}
+
+.about-eyebrow {
+    color: var(--about-cyan);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.about-hero h1 {
+    color: var(--about-white);
+    font-size: clamp(38px, 5vw, 68px);
+    line-height: 1.12;
+    margin: 0 0 25px;
+    letter-spacing: -2px;
+}
+
+.about-hero h1 span {
+    display: block;
+    background: var(--about-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-intro {
+    max-width: 620px;
+    font-size: 17px;
+    color: var(--about-text);
+    line-height: 1.9;
+}
+
+.about-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--about-gradient);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(8,123,255,0.25);
+}
+
+.about-secondary {
+    color: var(--about-cyan);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 5. HERO IDENTITY CARD */
+
+.about-hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.identity-card {
+    width: 100%;
+    max-width: 360px;
+    padding: 45px 25px;
+    text-align: center;
+    border: 1px solid rgba(25,217,242,0.2);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,34,56,0.95),
+            rgba(10,19,33,0.95)
+        );
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+}
+
+.identity-symbol {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.identity-card h2 {
+    color: var(--about-white);
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.identity-card p {
+    color: var(--about-muted);
+    font-size: 13px;
+}
+
+.identity-card span {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--about-cyan);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* 6. GENERAL PAGE SECTIONS */
+
+.about-section {
+    padding: 95px 9%;
+}
+
+.about-section.alternate {
+    background: #0D1624;
+}
+
+.about-section-heading {
+    max-width: 750px;
+    margin-bottom: 45px;
+}
+
+.about-section-heading h2,
+.philosophy h2,
+.about-closing h2 {
+    color: var(--about-white);
+    font-size: clamp(29px, 4vw, 43px);
+    line-height: 1.25;
+    margin: 0 0 18px;
+}
+
+.about-section-heading > p:not(.about-eyebrow) {
+    color: var(--about-muted);
+    font-size: 15px;
+}
+
+/* 7. STORY CONTENT */
+
+.about-story {
+    max-width: 850px;
+}
+
+.about-story p {
+    color: var(--about-text);
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 22px;
+}
+
+/* 8. EDUCATION AND EXPERIENCE CARDS */
+
+.journey-card,
+.experience-card {
+    max-width: 850px;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid var(--about-border);
+    background: var(--about-surface);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.journey-card:hover,
+.experience-card:hover {
+    border-color: rgba(25,217,242,0.4);
+    transform: translateY(-4px);
+}
+
+.card-category {
+    color: var(--about-cyan);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.journey-card h3,
+.experience-card h3 {
+    color: var(--about-white);
+    font-size: 25px;
+    margin: 18px 0 5px;
+}
+
+.card-highlight {
+    color: var(--about-cyan);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.journey-card p,
+.experience-card p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.card-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 7px 12px;
+    border-radius: 4px;
+    color: #56DDB4;
+    background: rgba(86,221,180,0.1);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.experience-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-status {
+    color: #56DDB4;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* 9. TECHNICAL INTERESTS */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.interest-card {
+    padding: 28px;
+    border: 1px solid var(--about-border);
+    border-radius: 9px;
+    background: var(--about-surface);
+    transition: 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--about-blue);
+    background: var(--about-surface-2);
+}
+
+.interest-number {
+    color: var(--about-cyan);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.interest-card h3 {
+    color: var(--about-white);
+    font-size: 19px;
+    margin: 20px 0 12px;
+}
+
+.interest-card p {
+    color: var(--about-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* 10. TOPIC TAGS */
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.topic-list span {
+    padding: 8px 13px;
+    border: 1px solid rgba(25,217,242,0.2);
+    border-radius: 4px;
+    color: var(--about-cyan);
+    background: rgba(8,123,255,0.07);
+    font-size: 11px;
+}
+
+/* 11. PRACTICAL EXPERIENCE */
+
+.practical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.practical-card {
+    padding: 28px;
+    background: var(--about-surface);
+    border-left: 3px solid var(--about-blue);
+    border-radius: 5px;
+}
+
+.practical-card h3 {
+    color: var(--about-white);
+    font-size: 18px;
+}
+
+.practical-card p {
+    color: var(--about-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 12. PERSONAL PHILOSOPHY */
+
+.philosophy {
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(8,123,255,0.14),
+            transparent 65%
+        ),
+        #101B2B;
+}
+
+.philosophy p:not(.about-eyebrow) {
+    max-width: 760px;
+    margin: 20px auto;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* 13. CLOSING SECTION */
+
+.about-closing {
+    padding: 100px 8%;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #101B2B,
+            #080D16
+        );
+}
+
+.about-closing p:not(.about-eyebrow) {
+    max-width: 600px;
+    margin: 20px auto 30px;
+    color: var(--about-muted);
+}
+
+.about-footer {
+    padding: 25px 8%;
+    text-align: center;
+    border-top: 1px solid var(--about-border);
+    background: #060A11;
+}
+
+.about-footer p {
+    color: var(--about-muted);
+    font-size: 12px;
+}
+
+/* 14. TABLET RESPONSIVENESS */
+
+@media (max-width: 900px) {
+
+    .about-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 75px 7%;
+    }
+
+    .about-intro {
+        margin: auto;
+    }
+
+    .about-hero-actions {
+        justify-content: center;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* 15. MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .about-header {
+        padding: 13px 5%;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .about-nav {
+        justify-content: center;
+        gap: 17px;
+    }
+
+    .about-nav a {
+        font-size: 11px;
+    }
+
+    .about-hero {
+        padding: 65px 6%;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .about-hero h1 {
+        font-size: 39px;
+        letter-spacing: -1.5px;
+    }
+
+    .about-intro {
+        font-size: 15px;
+    }
+
+    .identity-card {
+        padding: 35px 20px;
+    }
+
+    .about-section {
+        padding: 65px 6%;
+    }
+
+    .about-section-heading h2,
+    .philosophy h2,
+    .about-closing h2 {
+        font-size: 30px;
+    }
+
+    .about-story p {
+        font-size: 14px;
+    }
+
+    .journey-card,
+    .experience-card {
+        padding: 24px 20px;
+    }
+
+    .interest-grid,
+    .practical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-card,
+    .practical-card {
+        padding: 23px;
+    }
+
+    .about-closing {
+        padding: 75px 6%;
+    }
+
+}
+
+/* 16. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
