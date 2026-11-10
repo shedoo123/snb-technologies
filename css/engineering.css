@@ -1,0 +1,471 @@
+/* ==========================================
+   SNB TECHNOLOGIES
+   ENGINEERING PAGE
+   SPRINT 3.6.3
+========================================== */
+
+:root {
+    --eng-bg: #07111f;
+    --eng-surface: #0d1b2d;
+    --eng-surface-light: #12243a;
+    --eng-blue: #087bff;
+    --eng-cyan: #19d9f2;
+    --eng-text: #eaf2ff;
+    --eng-muted: #9aabc1;
+    --eng-border: rgba(255,255,255,0.09);
+}
+
+/* GENERAL */
+
+body {
+    background: var(--eng-bg);
+    color: var(--eng-text);
+}
+
+.engineering-page,
+main {
+    width: 100%;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--eng-cyan);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+/* HEADER */
+
+.site-header {
+    background: rgba(7,17,31,0.96);
+    border-bottom: 1px solid var(--eng-border);
+}
+
+.header-container {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--eng-text);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.site-header .logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: var(--eng-muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--eng-cyan);
+}
+
+/* HERO */
+
+.engineering-hero {
+    padding: 115px 0 100px;
+    background:
+    radial-gradient(
+    ellipse at 80% 30%,
+    rgba(8,123,255,0.17),
+    transparent 55%
+    ),
+    linear-gradient(135deg, #07111f, #0b1930);
+    border-bottom: 1px solid var(--eng-border);
+}
+
+.engineering-hero h1 {
+    max-width: 850px;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 15px 0 25px;
+}
+
+.engineering-hero h1 span {
+    display: block;
+    background: linear-gradient(
+    90deg,
+    var(--eng-blue),
+    var(--eng-cyan)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.engineering-hero > .container > p {
+    max-width: 720px;
+    color: var(--eng-muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.engineering-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+/* BUTTONS */
+
+.engineering-hero .btn,
+.engineering-closing .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.engineering-hero .btn-primary,
+.engineering-closing .btn-primary {
+    background: linear-gradient(
+    110deg,
+    var(--eng-blue),
+    #087bca
+    );
+    color: white;
+}
+
+.engineering-hero .btn-secondary {
+    border: 1px solid var(--eng-cyan);
+    color: var(--eng-cyan);
+}
+
+.engineering-hero .btn:hover,
+.engineering-closing .btn:hover {
+    transform: translateY(-3px);
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    max-width: 750px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.engineering-intro h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.section-heading p,
+.engineering-intro p {
+    color: var(--eng-muted);
+    line-height: 1.9;
+}
+
+/* INTRODUCTION */
+
+.engineering-intro {
+    padding: 90px 0;
+}
+
+.engineering-intro > .container > p {
+    max-width: 900px;
+    font-size: 15px;
+}
+
+/* DOMAINS */
+
+.engineering-domains {
+    padding: 90px 0;
+    background: #091626;
+    border-top: 1px solid var(--eng-border);
+    border-bottom: 1px solid var(--eng-border);
+}
+
+.domain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.domain-card {
+    position: relative;
+    padding: 30px;
+    background: var(--eng-surface);
+    border: 1px solid var(--eng-border);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(25,217,242,0.45);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.domain-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: rgba(8,123,255,0.13);
+    color: var(--eng-cyan);
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.domain-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: rgba(25,217,242,0.09);
+    color: var(--eng-cyan);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.domain-card h3 {
+    font-size: 21px;
+    margin: 17px 0 12px;
+}
+
+.domain-card p {
+    color: var(--eng-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.domain-card ul {
+    padding-left: 19px;
+    margin-top: 20px;
+}
+
+.domain-card li {
+    color: #c2d0e2;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.domain-card li::marker {
+    color: var(--eng-cyan);
+}
+
+/* PRACTICAL LEARNING */
+
+.practical-section {
+    padding: 90px 0;
+}
+
+.practical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.practical-item {
+    padding: 25px;
+    border-left: 3px solid var(--eng-blue);
+    background: var(--eng-surface);
+}
+
+.practical-item h3 {
+    margin-bottom: 12px;
+    color: var(--eng-cyan);
+}
+
+.practical-item p {
+    color: var(--eng-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ROADMAP */
+
+.roadmap-section {
+    padding: 90px 0;
+    background: #091626;
+    border-top: 1px solid var(--eng-border);
+}
+
+.roadmap-list {
+    max-width: 850px;
+    display: grid;
+    gap: 20px;
+}
+
+.roadmap-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 25px;
+    background: var(--eng-surface);
+    border: 1px solid var(--eng-border);
+    border-radius: 8px;
+}
+
+.roadmap-number {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(8,123,255,0.16);
+    color: var(--eng-cyan);
+    font-weight: 800;
+}
+
+.roadmap-item h3 {
+    margin-bottom: 10px;
+}
+
+.roadmap-item p {
+    color: var(--eng-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CLOSING */
+
+.engineering-closing {
+    padding: 100px 0;
+    text-align: center;
+    background:
+    radial-gradient(
+    ellipse at center,
+    rgba(8,123,255,0.15),
+    transparent 65%
+    );
+}
+
+.engineering-closing h2 {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: clamp(28px, 4vw, 43px);
+    line-height: 1.3;
+}
+
+.engineering-closing p {
+    max-width: 700px;
+    margin: 20px auto 30px;
+    color: var(--eng-muted);
+    line-height: 1.9;
+}
+
+/* FOOTER */
+
+.site-footer {
+    padding: 28px 0;
+    border-top: 1px solid var(--eng-border);
+    text-align: center;
+}
+
+.site-footer p {
+    color: var(--eng-muted);
+    font-size: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .main-nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .engineering-hero {
+        padding: 80px 0 70px;
+    }
+
+    .engineering-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .engineering-intro,
+    .engineering-domains,
+    .practical-section,
+    .roadmap-section {
+        padding: 65px 0;
+    }
+
+    .domain-grid,
+    .practical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .domain-card {
+        padding: 24px;
+    }
+
+    .roadmap-item {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .engineering-closing {
+        padding: 75px 0;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .engineering-hero-actions {
+        flex-direction: column;
+    }
+
+    .engineering-hero-actions .btn {
+        text-align: center;
+    }
+
+    .roadmap-item {
+        gap: 12px;
+    }
+
+    .domain-card h3 {
+        font-size: 19px;
+    }
+
+}
