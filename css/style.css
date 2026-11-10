@@ -891,3 +891,40 @@ a:focus-visible {
     border-color: #19D9F2;
     transform: translateY(-2px);
 }
+/* =========================================
+   SPRINT 4.0 — CUSTOM ERROR PAGE
+========================================= */
+
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.error-content {
+    max-width: 600px;
+}
+
+.error-content h1 {
+    font-size: clamp(90px, 20vw, 180px);
+    font-weight: 900;
+    line-height: 1;
+    margin: 20px 0;
+    color: var(--accent);
+}
+
+.error-content h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.error-content p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
