@@ -1,4 +1,3 @@
-
 /* =========================================
    SNB TECHNOLOGIES
    SPRINT 2.2 — VISUAL DESIGN SYSTEM
@@ -64,7 +63,7 @@ body {
     color: var(--text);
     line-height: 1.7;
     transition: background var(--transition),
-                color var(--transition);
+    color var(--transition);
 }
 
 a {
@@ -123,9 +122,9 @@ a:focus-visible {
     height: 45px;
 
     background: linear-gradient(
-        135deg,
-        #2563EB,
-        #38BDF8
+    135deg,
+    #2563EB,
+    #38BDF8
     );
 
     color: #FFFFFF;
@@ -258,7 +257,7 @@ a:focus-visible {
     font-weight: 700;
 
     transition: transform var(--transition),
-                background var(--transition);
+    background var(--transition);
 }
 
 .btn:hover {
@@ -325,11 +324,12 @@ a:focus-visible {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--accent)
-    );
+    /*background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+    );*/
+    background-color: transparent;
 
     color: white;
     font-size: 24px;
@@ -463,7 +463,7 @@ a:focus-visible {
     background: var(--surface);
 
     transition: transform var(--transition),
-                border-color var(--transition);
+    border-color var(--transition);
 }
 
 .domain-card:hover {
@@ -772,7 +772,7 @@ a:focus-visible {
     border: 1px solid var(--border);
     border-radius: 12px;
     transition: border-color var(--transition),
-                transform var(--transition);
+    transform var(--transition);
 }
 
 .profile-info-card:hover {
@@ -858,4 +858,35 @@ a:focus-visible {
     font-size: 10px;
     letter-spacing: 2px;
     color: var(--accent);
+}
+
+/* =========================================
+   HOMEPAGE PROFILE INTEREST TAGS
+   SPRINT 3.5.2
+   ========================================= */
+
+.profile-main .topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0 30px;
+}
+
+.profile-main .topic-list span {
+    display: inline-block;
+    padding: 8px 13px;
+    border: 1px solid rgba(25, 217, 242, 0.25);
+    border-radius: 4px;
+    background: rgba(8, 123, 255, 0.08);
+    color: #19D9F2;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: 0.3s ease;
+}
+
+.profile-main .topic-list span:hover {
+    background: rgba(8, 123, 255, 0.18);
+    border-color: #19D9F2;
+    transform: translateY(-2px);
 }

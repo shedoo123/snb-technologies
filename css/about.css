@@ -1,4 +1,3 @@
-
 /* =========================================
    SNB TECHNOLOGIES
    ABOUT PAGE — SPRINT 3.4
@@ -21,7 +20,7 @@
     --about-border: rgba(255,255,255,0.09);
 
     --about-gradient:
-        linear-gradient(120deg, #087BFF, #19D9F2);
+    linear-gradient(120deg, #087BFF, #19D9F2);
 }
 
 /* 2. GLOBAL RESET */
@@ -128,16 +127,16 @@ a {
     gap: 55px;
 
     background:
-        radial-gradient(
-            circle at 85% 35%,
-            rgba(8,123,255,0.16),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #080D16,
-            #101C30
-        );
+    radial-gradient(
+    circle at 85% 35%,
+    rgba(8,123,255,0.16),
+    transparent 35%
+    ),
+    linear-gradient(
+    135deg,
+    #080D16,
+    #101C30
+    );
 }
 
 .about-eyebrow {
@@ -217,20 +216,19 @@ a {
     border-radius: 14px;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(20,34,56,0.95),
-            rgba(10,19,33,0.95)
-        );
+    linear-gradient(
+    145deg,
+    rgba(20,34,56,0.95),
+    rgba(10,19,33,0.95)
+    );
 
     box-shadow: 0 25px 70px rgba(0,0,0,0.3);
 }
 
 .identity-symbol {
-    width: 115px;
-    height: 115px;
+    width: 155px;
+    height: 155px;
     object-fit: contain;
-    margin-bottom: 20px;
 }
 
 .identity-card h2 {
@@ -453,12 +451,12 @@ a {
 .philosophy {
     text-align: center;
     background:
-        radial-gradient(
-            circle at center,
-            rgba(8,123,255,0.14),
-            transparent 65%
-        ),
-        #101B2B;
+    radial-gradient(
+    circle at center,
+    rgba(8,123,255,0.14),
+    transparent 65%
+    ),
+    #101B2B;
 }
 
 .philosophy p:not(.about-eyebrow) {
@@ -475,11 +473,11 @@ a {
     text-align: center;
 
     background:
-        linear-gradient(
-            135deg,
-            #101B2B,
-            #080D16
-        );
+    linear-gradient(
+    135deg,
+    #101B2B,
+    #080D16
+    );
 }
 
 .about-closing p:not(.about-eyebrow) {

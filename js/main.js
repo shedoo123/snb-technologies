@@ -17,7 +17,7 @@ if (menuToggle && navLinks) {
 
         const isOpen = navLinks.classList.contains("active");
 
-        menuToggle.textContent = isOpen ? "✕" : "☰";
+        menuToggle.textContent = isOpen ? "✕": "☰";
 
         menuToggle.setAttribute(
             "aria-expanded",
@@ -56,7 +56,7 @@ const themeToggle = document.querySelector(".theme-toggle");
 const savedTheme = localStorage.getItem("snb-theme");
 
 const initialTheme =
-    savedTheme === "light" ? "light" : "dark";
+savedTheme === "light" ? "light": "dark";
 
 
 function applyTheme(theme) {
@@ -66,13 +66,12 @@ function applyTheme(theme) {
     if (themeToggle) {
 
         themeToggle.textContent =
-            theme === "dark" ? "☀" : "☾";
+        theme === "dark" ? "☀": "☾";
 
         themeToggle.setAttribute(
             "aria-label",
             theme === "dark"
-                ? "Switch to light theme"
-                : "Switch to dark theme"
+            ? "Switch to light theme": "Switch to dark theme"
         );
 
     }
@@ -94,7 +93,7 @@ if (themeToggle) {
         const currentTheme = document.body.dataset.theme;
 
         const newTheme =
-            currentTheme === "dark" ? "light" : "dark";
+        currentTheme === "dark" ? "light": "dark";
 
         applyTheme(newTheme);
 
