@@ -59,7 +59,7 @@ a {
     justify-content: space-between;
     gap: 20px;
 
-    background: rgba(8,13,22,0.95);
+    background: var(--header-bg);
     border-bottom: 1px solid var(--about-border);
     position: sticky;
     top: 0;
@@ -257,7 +257,7 @@ a {
 }
 
 .about-section.alternate {
-    background: #0D1624;
+    background: var(--about-surface-2);
 }
 
 .about-section-heading {

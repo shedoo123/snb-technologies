@@ -15,32 +15,63 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
 
     <!-- HEADER -->
 
-    <header class="about-header">
-        <a href="../index.html" class="about-brand">
-            <img src="../assets/images/favicon.svg"
-            alt="SNB Technologies">
-            <span>
-                <strong>SNB</strong>
-                <small>TECHNOLOGIES</small>
-            </span>
-        </a>
+    <header class="site-header">
+        <nav class="navbar">
 
+            <a href="../index.html" class="logo">
 
-        <nav class="about-nav">
-            <a href="../index.html">Home</a>
-            <a href="index.html" class="active">About</a>
-            <a href="../engineering/index.html">Engineering</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#contact">Contact</a>
+                <img
+                src="../assets/images/snb-symbol-transparent.svg"
+                alt="SNB Technologies symbol"
+                class="brand-symbol"
+                >
+
+                <span class="brand-name">
+                    <strong>SNB</strong>
+                    <small>TECHNOLOGIES</small>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                >
+                ☰
+            </button>
+
+            <div class="nav-links">
+
+                <a href="../index.html">Home</a>
+
+                <a href="index.html" class="active">About</a>
+
+                <a href="../engineering/index.html">Engineering</a>
+
+                <a href="../projects/index.html">Projects</a>
+
+                <a href="../index.html#contact">Contact</a>
+
+            </div>
+
+            <button
+                class="theme-toggle"
+                aria-label="Switch to light theme"
+                >
+                ☀
+            </button>
+
         </nav>
-
     </header>
+
 
 
     <main>
@@ -513,6 +544,6 @@
             Engineering Beyond Limits.
         </p>
     </footer>
-
+    <script src="../js/main.js"></script>
 </body>
 </html>

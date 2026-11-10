@@ -1,0 +1,382 @@
+/* =========================================
+   SNB TECHNOLOGIES
+   GLOBAL THEME SYSTEM
+   SPRINT 3.7.5
+   ========================================= */
+
+
+/* 1. GLOBAL LIGHT THEME */
+
+body[data-theme="light"] {
+
+    color-scheme: light;
+
+    /* Homepage tokens */
+    --bg: #F5F7FA;
+    --surface: #FFFFFF;
+    --elevated: #E8EEF5;
+    --text: #172235;
+    --muted: #64748B;
+    --border: rgba(23, 34, 53, 0.12);
+    --header-bg: rgba(245, 247, 250, 0.94);
+
+    /* About page tokens */
+    --about-bg: #F5F7FA;
+    --about-surface: #FFFFFF;
+    --about-surface-2: #E8EEF5;
+    --about-blue: #1D4ED8;
+    --about-cyan: #0284C7;
+    --about-white: #172235;
+    --about-text: #334155;
+    --about-muted: #64748B;
+    --about-border: rgba(23, 34, 53, 0.12);
+    --about-gradient: linear-gradient(120deg, #1D4ED8, #0284C7);
+
+    /* Engineering page tokens */
+    --eng-bg: #F5F7FA;
+    --eng-surface: #FFFFFF;
+    --eng-surface-light: #E8EEF5;
+    --eng-blue: #1D4ED8;
+    --eng-cyan: #0284C7;
+    --eng-text: #172235;
+    --eng-muted: #64748B;
+    --eng-border: rgba(23, 34, 53, 0.12);
+
+    /* Projects page tokens */
+    --projects-bg: #F5F7FA;
+    --projects-surface: #FFFFFF;
+    --projects-surface-light: #E8EEF5;
+    --projects-blue: #1D4ED8;
+    --projects-cyan: #0284C7;
+    --projects-text: #172235;
+    --projects-muted: #64748B;
+    --projects-border: rgba(23, 34, 53, 0.12);
+}
+
+
+/* 2. GLOBAL PAGE BACKGROUNDS */
+
+body[data-theme="light"] {
+    background: var(--bg);
+    color: var(--text);
+}
+
+body[data-theme="light"] .about-header,
+body[data-theme="light"] .site-header {
+    background: rgba(245, 247, 250, 0.96);
+    border-bottom-color: var(--border);
+}
+
+
+/* 3. GLOBAL THEME BUTTON */
+
+.theme-toggle {
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+
+    height: 44px;
+    min-height: 44px;
+
+    padding: 0;
+
+    white-space: nowrap;
+    line-height: 1;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+}
+
+
+/* 4. LIGHT THEME — HEADER TEXT */
+
+body[data-theme="light"] .logo,
+body[data-theme="light"] .brand-name,
+body[data-theme="light"] .about-brand {
+    color: var(--text);
+}
+
+body[data-theme="light"] .main-nav a,
+body[data-theme="light"] .about-nav a {
+    color: var(--muted);
+}
+
+body[data-theme="light"] .main-nav a:hover,
+body[data-theme="light"] .main-nav a.active,
+body[data-theme="light"] .about-nav a:hover,
+body[data-theme="light"] .about-nav a.active {
+    color: var(--accent);
+}
+
+
+
+/* 5. UNIFIED RESPONSIVE NAVIGATION */
+
+.navbar {
+    position: relative;
+}
+
+/* Keep logo dimensions stable */
+
+.navbar .logo {
+    flex-shrink: 0;
+}
+
+/* Consistent menu and theme controls */
+
+.navbar .menu-toggle,
+.navbar .theme-toggle {
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+
+    padding: 0;
+    margin: 0;
+
+    white-space: nowrap;
+    line-height: 1;
+}
+
+/* Desktop navigation */
+
+@media (min-width: 651px) {
+
+    .navbar .menu-toggle {
+        display: none;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+
+/* Mobile navigation */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: 68px;
+        padding: 0 16px;
+        gap: 8px;
+    }
+
+    .navbar .logo {
+        min-width: 0;
+    }
+
+    .navbar .brand-symbol {
+        width: 36px;
+        height: 36px;
+    }
+
+    .navbar .brand-name strong {
+        font-size: 13px;
+    }
+
+    .navbar .brand-name small {
+        font-size: 8px;
+    }
+
+    .navbar .menu-toggle {
+        display: inline-flex;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .navbar .theme-toggle {
+        flex-shrink: 0;
+    }
+
+    .navbar .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        padding: 22px 20px;
+
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        z-index: 1000;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .nav-links a {
+        font-size: 14px;
+        width: 100%;
+    }
+
+}
+/* =========================================
+   SPRINT 3.9.1
+   LIGHT THEME — DARK SECTION CONTRAST
+========================================= */
+
+/* ABOUT HERO */
+
+body[data-theme="light"] .about-hero {
+    color: #C5D0DE;
+}
+
+body[data-theme="light"] .about-hero h1,
+body[data-theme="light"] .identity-card h2 {
+    color: #F5F8FC;
+}
+
+body[data-theme="light"] .about-intro {
+    color: #C5D0DE;
+}
+
+body[data-theme="light"] .identity-card p {
+    color: #B8C5D6;
+}
+
+/* ENGINEERING HERO */
+
+body[data-theme="light"] .engineering-hero {
+    color: #EAF2FF;
+}
+
+body[data-theme="light"] .engineering-hero h1 {
+    color: #F5F8FC;
+}
+
+body[data-theme="light"] .engineering-hero > .container > p {
+    color: #C5D0DE;
+}
+
+/* PROJECTS HERO */
+
+body[data-theme="light"] .projects-hero {
+    color: #EDF5FF;
+}
+
+body[data-theme="light"] .projects-hero h1 {
+    color: #F5F8FC;
+}
+
+body[data-theme="light"] .projects-hero > .container > p {
+    color: #C5D0DE;
+}
+
+body[data-theme="light"] .projects-overview span {
+    color: #B8C5D6;
+}
+
+/* ABOUT FOOTER */
+
+body[data-theme="light"] .about-footer {
+    background: #060A11;
+}
+
+body[data-theme="light"] .about-footer p {
+    color: #B8C5D6;
+}
+
+/* PROJECTS FOOTER */
+
+body[data-theme="light"] .site-footer {
+    background: #050D18;
+}
+
+body[data-theme="light"] .site-footer p {
+    color: #B8C5D6;
+}
+
+/* ENGINEERING DOMAIN LISTS */
+
+body[data-theme="light"] .domain-card li {
+    color: #475569;
+}
+/* =========================================
+   SPRINT 3.9.1 — FINAL CONTRAST FIXES
+========================================= */
+
+/* ABOUT: PERSONAL PHILOSOPHY */
+
+body[data-theme="light"] .philosophy h2 {
+    color: #F5F8FC;
+}
+
+body[data-theme="light"] .philosophy p:not(.about-eyebrow) {
+    color: #C5D0DE;
+}
+
+/* ABOUT: CLOSING SECTION */
+
+body[data-theme="light"] .about-closing h2 {
+    color: #F5F8FC;
+}
+
+body[data-theme="light"] .about-closing p:not(.about-eyebrow) {
+    color: #C5D0DE;
+}
+
+body[data-theme="light"] .about-closing .about-eyebrow {
+    color: #19D9F2;
+}
+
+/* PROJECTS: DARK PROJECT ARTWORK */
+
+body[data-theme="light"] .project-visual-content strong {
+    color: #EDF5FF;
+}
+
+body[data-theme="light"] .project-visual-content small {
+    color: #B8C5D6;
+}
+
+/* ENGINEERING: CLOSING SECTION */
+
+body[data-theme="light"] .engineering-closing h2 {
+    color: var(--eng-text);
+}
+
+body[data-theme="light"] .engineering-closing p {
+    color: var(--eng-muted);
+}

@@ -14,31 +14,61 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/engineering.css">
+    <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
 
     <!-- HEADER -->
+
     <header class="site-header">
-        <div class="container header-container">
+        <nav class="navbar">
 
             <a href="../index.html" class="logo">
+
                 <img
                 src="../assets/images/snb-symbol-transparent.svg"
-                alt="SNB Technologies Logo"
+                alt="SNB Technologies symbol"
+                class="brand-symbol"
                 >
-                <span>SNB Technologies</span>
+
+                <span class="brand-name">
+                    <strong>SNB</strong>
+                    <small>TECHNOLOGIES</small>
+                </span>
+
             </a>
 
-            <nav class="main-nav">
-                <a href="../index.html">Home</a>
-                <a href="../about/index.html">About</a>
-                <a href="index.html" class="active">Engineering</a>
-                <a href="../index.html#projects">Projects</a>
-                <a href="../index.html#contact">Contact</a>
-            </nav>
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                >
+                ☰
+            </button>
 
-        </div>
+            <div class="nav-links">
+
+                <a href="../index.html">Home</a>
+
+                <a href="../about/index.html">About</a>
+
+                <a href="index.html" class="active">Engineering</a>
+
+                <a href="../projects/index.html">Projects</a>
+
+                <a href="../index.html#contact">Contact</a>
+
+            </div>
+
+            <button
+                class="theme-toggle"
+                aria-label="Switch to light theme"
+                >
+                ☀
+            </button>
+
+        </nav>
     </header>
 
 

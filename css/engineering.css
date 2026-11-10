@@ -44,7 +44,7 @@ main {
 /* HEADER */
 
 .site-header {
-    background: rgba(7,17,31,0.96);
+    background: var(--header-bg);
     border-bottom: 1px solid var(--eng-border);
 }
 
@@ -66,9 +66,10 @@ main {
 }
 
 .site-header .logo img {
-    width: 38px;
-    height: 38px;
+    width: 75px;
+    height: 42px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .main-nav {
@@ -205,7 +206,7 @@ main {
 
 .engineering-domains {
     padding: 90px 0;
-    background: #091626;
+    background: var(--eng-surface-light);
     border-top: 1px solid var(--eng-border);
     border-bottom: 1px solid var(--eng-border);
 }
@@ -314,7 +315,7 @@ main {
 
 .roadmap-section {
     padding: 90px 0;
-    background: #091626;
+    background: var(--eng-surface-light);
     border-top: 1px solid var(--eng-border);
 }
 
