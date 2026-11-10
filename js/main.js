@@ -61,7 +61,13 @@ if (menuToggle && navLinks) {
 
 const themeToggle = document.querySelector(".theme-toggle");
 
-const savedTheme = localStorage.getItem("snb-theme");
+let savedTheme = null;
+
+try {
+    savedTheme = localStorage.getItem("snb-theme");
+} catch (error) {
+    console.warn("Theme preference could not be read:", error);
+}
 
 const initialTheme =
 savedTheme === "light" ? "light": "dark";
@@ -105,7 +111,11 @@ if (themeToggle) {
 
         applyTheme(newTheme);
 
-        localStorage.setItem("snb-theme", newTheme);
+        try {
+            localStorage.setItem("snb-theme", newTheme);
+        } catch (error) {
+            console.warn("Theme preference could not be saved:", error);
+        }
 
     });
 
